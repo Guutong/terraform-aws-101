@@ -81,8 +81,18 @@ provider "aws" {
 }
 ```
 
+use file tfvars
+```
+profile = "odds"
+instance_type = "t2.medium"
+```
+
+
+cmd
 ```
 terraform plan -out tfplan -var "profile=odds"
+or
+terraform plan -out tfplan -var-file=terraform.tfvars
 ```
 
 ### Data
