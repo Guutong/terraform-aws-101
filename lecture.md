@@ -122,3 +122,7 @@ data "aws_subnet" "selected" {
   }
 }
 ```
+
+```
+  key_name      = "guutong-ec2"
+```
