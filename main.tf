@@ -11,6 +11,7 @@ data "aws_subnet" "selected" {
 }
 
 resource "aws_instance" "guutong_ec2" {
+  count         = 1
   ami           = "ami-093da183b859d5a4b"
   instance_type = var.instance_type
   subnet_id     = data.aws_subnet.selected.id
