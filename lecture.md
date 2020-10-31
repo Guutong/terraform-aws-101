@@ -95,4 +95,10 @@ or
 terraform plan -out tfplan -var-file=terraform.tfvars
 ```
 
+*note*
+```
+secret.tfvars // add secret.tfvars to ignore file
+terraform.tfvars
+```
+
 ### Data
