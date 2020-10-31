@@ -63,7 +63,26 @@ terraform destroy
 
 
 ### Variable
+```
+variable "profile" {
+    description =  "AWS Profile"
+}
+or
+variable "profile" {
+    description =  "AWS Profile"
+    default = "default"
+}
+```
+use 
+```
+provider "aws" {
+    profile = var.profile
+    region = "ap-southeast-1"
+}
+```
 
-
+```
+terraform plan -out tfplan -var "profile=odds"
+```
 
 ### Data
