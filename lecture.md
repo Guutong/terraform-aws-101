@@ -8,3 +8,62 @@
 - LAMBDA
 
 
+# Terraform
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
+- A map Of
+- List
+
+**** required
+```sh
+brew install aws-cli
+```
+
+in file `main.tf`
+### provider 
+```
+provider "aws" {
+    region = "ap-southeast-1"
+}
+```
+
+
+### resource 
+
+```
+resource "aws_instance" "guutong_ec2" {
+    ami             = "ami-093da183b859d5a4b"
+    instance_type   = "t2.micro"
+}
+```
+
+### command 
+
+### Init terraform ใช้เฉพาะ ครั้งแรก
+```sh
+terraform init
+```
+
+### terraform plan 
+เอาไว้ใช้ plan ของ
+
+
+```sh
+terraform plan -out tfplan
+```
+
+เอาไว้ช่วยดู state ของการสร้างเครื่อง
+
+
+
+```
+terraform destroy
+```
+เอาไว้ destroy ของจาก state
+
+
+### Variable
+
+
+
+### Data
