@@ -102,3 +102,23 @@ terraform.tfvars
 ```
 
 ### Data
+
+code
+```
+data "<service>" "<variable_name>" {
+  filter { // <---- filter by tag name
+    name = "tag:Name"
+    values = ["<name>"]
+  }
+}
+```
+
+ex.
+```
+data "aws_subnet" "selected" {
+  filter {
+    name   = "tag:Name"
+    values = ["permier-research-ap-southeast-1b"]
+  }
+}
+```
